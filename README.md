@@ -1,21 +1,26 @@
-# My dotfiles
+# Dotfiles
 
-Contained here are my configuration files for:
+This is my collection of configuration files.
 
-* vim
-* bash
-* zsh
-
----
 ## Usage
 
-Clone this repository into ~/.dotfiles, and then use symlinks to bring the shared copies into ~.
+Clone this repository into ~/.dotfiles, and then create the symlinks [using GNU stow](https://www.gnu.org/software/stow/).
 
 Example:
 
 ```terminal
-$ ln -s ~/.dotfiles/.vimrc ~/.vimrc
-$ ln -s ~/.dotfiles/.vim ~/.vim
-$ ...
+$ git clone git@github.com:jfreites/dotfiles.git ~/.dotfiles
+$ cd ~/.dotfiles
+$ stow neovim tmux fish # plus whatever else you'd like
 ```
+
+For TMUX, install the Plugin Manager and then press prefix + I (capital i, as Install) to fetch the plugins.
+
+```terminal
+ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+## License
+
+MIT
 
